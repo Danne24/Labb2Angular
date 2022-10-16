@@ -1,0 +1,22 @@
+.container {
+    margin-top: 5em;
+    margin-left: 50em;
+}
+
+thead {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    background-color: lightcoral;
+
+}
+
+h1 {
+    margin-left: 5em;
+    font-size: 35px;
+    color: crimson;
+    font-weight: 2000;
+}

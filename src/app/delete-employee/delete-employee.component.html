@@ -1,0 +1,50 @@
+<body>
+
+
+
+    <div class="container">
+        <h1>Click on the red trash can button to remove an employee</h1>
+
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th> FirstName </th>
+                    <th> LastName </th>
+                    <th>FullName</th>
+                    <th> Email </th>
+                    <th> Phone Number </th>
+                    <th> Gender </th>
+                    <th> Address</th>
+                    <th> City </th>
+                    <th> Salary </th>
+                    <th> Department </th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.employeeFirstName}}</td>
+                    <td>{{employee.employeeLastName}}</td>
+                    <td>{{employee.employeeFirstName + " " + employee.employeeLastName}}</td>
+                    <td>{{employee.employeeEmail}}</td>
+                    <td>{{employee.employeePhoneNumber}}</td>
+                    <td>{{employee.employeeGender}}</td>
+                    <td>{{employee.employeeAddress}}</td>
+                    <td>{{employee.employeeCity}}</td>
+                    <td>{{employee.employeeSalary}}</td>
+                    <td>{{employee.department?.departmentName}}</td>
+
+
+                    <td class="employee-row-action">
+                        <a (click)="onDelete(employee.employeeID)"><i class="fa-solid fa-trash-can"></i></a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

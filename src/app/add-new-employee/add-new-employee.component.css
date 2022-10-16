@@ -1,0 +1,21 @@
+.container {
+    margin-top: 1em;
+    margin-left: 70em;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.employee-grid {
+    font-size: 50px;
+    color: blueviolet;
+
+}
+
+h1 {
+    margin-left: -5em;
+    font-size: 35px;
+    color: crimson;
+    font-weight: 2000;
+}

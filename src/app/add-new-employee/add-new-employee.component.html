@@ -1,0 +1,94 @@
+<div class="container">
+
+
+
+    <h1>Add a new employee or update an existing one</h1>
+
+    <div class="employee-container">
+
+
+        <div class="employee-form">
+
+
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <label for="">FirstName </label>
+                    <input type="text" name="firstName" [(ngModel)]="employee.employeeFirstName">
+                </div>
+
+                <div class="form-group">
+                    <label for="">LastName </label>
+                    <input type="text" name="Lastname" [(ngModel)]="employee.employeeLastName">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Gender </label>
+                    <input type="text" name="Gender" [(ngModel)]="employee.employeeGender">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Address </label>
+                    <input type="text" name="Address" [(ngModel)]="employee.employeeAddress">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">City </label>
+                    <input type="text" name="City" [(ngModel)]="employee.employeeCity">
+                </div>
+
+                <div class="form-group">
+                    <label for="">PhoneNumber </label>
+                    <input type="text" name="PhoneNumber" [(ngModel)]="employee.employeePhoneNumber">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Email </label>
+                    <input type="text" name="Email" [(ngModel)]="employee.employeeEmail">
+                </div>
+
+                <div class="form-group">
+                    <label for="">EmployeeSalary </label>
+                    <input type="text" name="EmployeeSalary" [(ngModel)]="employee.employeeSalary">
+                </div>
+
+                <div class="form-group">
+                    <label for="">DepartmentID </label>
+                    <input type="text" name="DepartmentID" [(ngModel)]="employee.departmentID">
+                </div>
+
+                <div class="form-group">
+
+                    <button>Save/Update</button>
+
+                </div>
+
+
+            </form>
+
+
+
+
+
+        </div>
+
+        <div class="employee-grid">
+
+            <div (click)="populateForm(employee)" class="employee-row" *ngFor="let employee of employees">
+                <div class="employee-row-details">
+                    <span>{{employee.employeeFirstName + " " + employee.employeeLastName}}</span>
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
